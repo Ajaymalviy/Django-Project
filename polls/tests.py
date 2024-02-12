@@ -42,6 +42,9 @@ class QuestionModelTests(TestCase):
 #         returns a 404 not found.
 #         """
 #         future_question = create_question(question_text="Future question.", days=5)
+        # future_question = create_question(question_text="Future question.", days=5): This line creates a question object with a publication date 
+        # set to 5 days in the future using a helper function named create_question.
+        #  This function seems to be creating a question with some specified properties, like question_text and days.
 #         url = reverse("polls:detail", args=(future_question.id,))
 #         response = self.client.get(url)
 #         self.assertEqual(response.status_code, 404)
