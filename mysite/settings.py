@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'aapointment_system'
+    'appointment_system',
     'polls',
     'django.contrib.admin',
     'django.contrib.auth',

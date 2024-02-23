@@ -18,8 +18,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from appointment_system.views import hello_world
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),  # Include the URL patterns for the polls app
     path('appointment_system/', include('appointment_system.urls'))
 ]
+
+urlpatterns = [
+    path('hello/', hello_world, name='hello_world'),
+]
+
