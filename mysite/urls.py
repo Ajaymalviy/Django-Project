@@ -18,7 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from appointment_system.views import hello_world
+# from appointment_system.views import hello_world
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,7 +26,23 @@ urlpatterns = [
     path('appointment_system/', include('appointment_system.urls'))
 ]
 
+# urlpatterns = [
+#     path('hello/', hello_world, name='hello_world'),
+# ]
+
+#------------------------------------------------------------------
+
+from appointment_system.views import list_documents
+
 urlpatterns = [
-    path('hello/', hello_world, name='hello_world'),
+    path('list_documents/', list_documents, name='list_documents'),
+]
+# urls.py
+
+from django.urls import path
+from appointment_system.views import index
+
+urlpatterns = [
+    path('', index, name='index'),
 ]
 

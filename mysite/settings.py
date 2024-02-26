@@ -77,13 +77,21 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'Appointment_System',
-        'ENFORCE_SCHEMA': False,
+        'NAME': 'newproject',  # Specify the name of your MongoDB database
+        'ENFORCE_SCHEMA': False,  # Optional: Set to True if you want to enforce schema validation
+        'CLIENT': {
+            'host': 'mongodb://localhost:27017/',  # Specify the MongoDB connection URI
+        }
     }
 }
+
+
+
 
 
 # Password validation
@@ -126,3 +134,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATICFILES_DIRS = [
+   BASE_DIR / "static"
+]
